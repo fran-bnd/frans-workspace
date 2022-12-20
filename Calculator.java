@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Calculator {
     /**
-     * I wanto to create a calculator able to multiply and devide numbers
-     * Inputs are numbers and actions user want to perform
+     * I wanto to create a calculator able to multiply and devide numbers.
+     * Inputs are numbers and actions user want to perform.
      */
     
     public static void main(String[] args){
