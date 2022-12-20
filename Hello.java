@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class Hello{
+    /**
+     * I wanto to create program that that uses the Scanner
+     */
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);  //Reading from System.in
         System.out.println("Input a value: "); 
