@@ -35,6 +35,8 @@ public class Coffeeshop {
                     System.out.println("Enjoy americano x " + amountInput);
                 }
             }
+            double balanceUsed = (americanoPrice * amountInput);
+            System.out.println("You have left $" + (balance - (balanceUsed)));
         }else{
             System.out.println("No coffee - balance 0 or less");
         }
