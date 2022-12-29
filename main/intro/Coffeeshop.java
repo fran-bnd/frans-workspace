@@ -1,4 +1,4 @@
-package main;
+package main.intro;
 import java.util.Scanner;
 
 public class Coffeeshop {
