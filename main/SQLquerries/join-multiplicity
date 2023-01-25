@@ -1,0 +1,38 @@
+
+-- Creating the db model with primary and foreing keys:
+create table category (id integer primary key, category_title varchar(255));
+create table grocery (id integer primary key, grocery_name varchar(255), category_id integer references category(id));
+create table store (id integer primary key, store_name varchar(255));
+create table offering (id integer primary key, price decimal, grocery_id integer references grocery(id), store_id integer references store(id));
+
+--insert into category (id, category_title) values (1, 'produce'), (2, 'bakery');
+--insert into grocery (id, grocery_name, category_id) values (1, 'banana', 1), (2, 'bread', 2), (3, 'potato', 1), (4, 'pie', 2);
+--insert into store (id, store_name) values (1, 'publix'), (2, 'whole foods');
+--insert into offering (id, price, grocery_id, store_id) values (1, .79, 1, 1), (2, .89, 1, 2), (3, 1.99, 2, 1), (4, 2.49, 2, 2), (5, 1.49, 3, 1), (6, 1.59, 3, 2), (7, 5.99, 4, 1), (8, 9.99, 4, 2);
+
+select * from grocery inner join category on category.id = grocery.category_id;
+
+-- natural join will automatically join on similarly named columns (in this case, the result is misleading)
+--select * from grocery natural join category;
+
+-- cross join displays all the possible combinations between tables
+--select * from grocery cross join category;
+
+-- filtering with where statment
+select * from grocery inner join category on category.id = grocery.category_id where category_title = 'bakery';
+
+-- selecting only some columns
+select grocery_name, category_title from grocery inner join category on category.id = grocery.category_id;
+
+-- using alis x and y to nest join all the tables
+select * from (select * from (select * from grocery inner join category on category.id = grocery.category_id) as x inner join offering on x.id = offering.grocery_id) as y inner join store on y.store_id = store.id;
+
+-- NORMALIZATION: the process of eleminating redundant data while maintaning relationships as well
+-- 1stNF- contain a pkey and distinct columns
+-- 2ndNF- no composite keys (the pkey is a single value)
+-- 3rdNF- no transitive keys (all columns of the table are linked to the pkey, without any intermediate steps)
+--"the key, all of the key, nothing but the key"
+
+-- REFERENTIAL INTEGRITY: the logical relationship between pkeys and fkeys
+
+-- MULTIPLICITY: one-to-many / many-tomany / one-to-one

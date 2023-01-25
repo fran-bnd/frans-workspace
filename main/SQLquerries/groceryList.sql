@@ -5,18 +5,20 @@
 -- AGREGATES / GROUP BY 
 -- ALTER TABLE (e.g. adda a new column after the table was created)
 
--- alter table grocery add type varchar(255);
+alter table grocery add type varchar(255);
 
--- update grocery set type ='produce' where name not null;
--- update grocery set type = 'meat' where name = 'bacon';
+
+-- UPDATE values SET and WHERE
+update grocery set type ='produce' where name not null;
+update grocery set type = 'meat' where name = 'bacon';
 
 
 --insert into grocery (id, name, price, type) values (6, 'meat', 10.44, 'meat');
 --insert into grocery (id, name, price, type) values (7, 'bread', 5.49, 'bakery');
 
-
 -- select * from grocery;
 
+-- some Aggregate Functions:
 select sum(price) from grocery;
 select avg(price) from grocery;
 select max(price) from grocery;
