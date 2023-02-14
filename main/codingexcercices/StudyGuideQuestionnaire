@@ -1,0 +1,164 @@
+Week 1
+
+What is compilation?
+What does it mean for Java to be strongly typed?
+What are primitive types?
+What are the 8 primitive types in Java?
+What is a method?
+What does ‘return’ do?
+What is a return type?
+What does the return type ‘void’ mean?
+What is a method parameter?
+What are the different boolean operators?
+What is a stack trace?
+
+Week 2
+
+What is OOP?
+What are Objects?
+What is the relationship between a Class and an Object in Java?
+What are constructors?
+What is an Array?
+What are the different flow control statements in Java?
+How is a for loop written in Java?
+What are break & continue statements?
+What is JUnit?
+What is a unit test?
+What are some of the annotations used in JUnit?
+What is TDD?
+
+Week 3
+
+What are exceptions in Java?
+How are errors different from exceptions?
+What is the difference between checked and unchecked exceptions?
+What might cause a NullPointerException?
+Is ArrayIndexOutOfBoundsException a runtime exception?
+Is FileNotFoundException a runtime exception?
+How do I find where an exception was thrown within the program?
+What does ‘throws’ do?
+What does try/catch do?
+Can I have multiple catch blocks? Multiple try blocks?
+What are collections in Java?
+What is the difference between a List and a Set?
+What is the difference between a Set and a Map?
+What is the difference between a Stack and a Queue?
+What is the difference between an ArrayList and LinkedList?
+Are maps part of the collection interface?
+What is a wrapper class?
+
+Week 4
+
+What do access modifiers do?
+What are the 4 access modifiers?
+What are the non-access modifiers in Java?
+What does Static do?
+What does final do?
+What is Scope in programming languages?
+What are the different scopes in Java?
+What is SQL & why is it used?
+What are the sublanguages of SQL?
+What is a table in SQL?
+What are primary keys for?
+How do I query everything from a table?
+How do I query only the rows that meet some criteria in a table?
+How do I insert into a table?
+How do I update values in a table?
+How do I sort the results of a query in SQL?
+What do aggregate functions do in SQL?
+What are some of the aggregate functions?
+What is JDBC?
+What are the different classes/interfaces used in JDBC?
+What needs to be done to query from the database using JDBC?
+What is a DAO for?
+What is Mockito for?
+How are Mock objects in Mockito created?
+
+Week 5
+
+What is HTTP?
+What is GET usually used for?
+What is POST usually used for?
+What is PUT usually used for?
+What is PATCH usually used for?
+What is DELETE usually used for?
+What are 100-level status codes for?
+What are 200-level status codes for?
+What are 300-level status codes for?
+What are 400-level status codes for?
+What are 500-level status codes for?
+What is a path parameter?
+What is a request body?
+What is a response body?
+What are headers?
+What is JSON?
+What is Javalin?
+How can I build a server using Javalin?
+How can I design an endpoint in Javalin?
+What is the Context object for in Javalin?
+What is Maven?
+What is the Maven lifecycle?
+How do I find & add a new dependency to Maven?
+Can you explain the 3-layer controller-service-DAO architecture?
+
+Week 6
+
+What are foreign keys in SQL?
+What is referential integrity in SQL?
+What is an alias in SQL?
+What is multiplicity in SQL?
+What is normalization & why do we use it?
+What characterizes 1st normal form (1nf)?
+What characterizes 2nd normal form (2nf)?
+What characterizes 3rd normal form (3nf)?
+What is join in SQL?
+What is an inner join?
+What are left/right joins?
+What is a view in SQL?
+What is REST?
+What is a resource in REST?
+Why do we use REST?
+What do we need to do to make an endpoint RESTful?
+
+Week 7
+
+What is the JDK?
+What is the JRE?
+What is the JVM? 
+What is contained in stack memory?
+What is contained in heap memory?
+What is the String Pool & does it belong to stack or heap memory?
+What is garbage collection?
+What is UNIX?
+How do I change directories in UNIX?
+How do I view the contents of my directory in UNIX?
+What is Git?
+Why do we use Git?
+What is a commit?
+What is GitHub?
+What does pushing do?
+What does pulling do?
+What does clone do?
+What does branch do?
+What does checkout do?
+What does merge do?
+
+Week 8
+
+What are the 4 pillars of OOP?
+Can you explain Inheritance?
+Can you explain Polymorphism?
+Can you explain Encapsulation?
+Can you explain Abstraction?
+What is the Object class in Java?
+What methods does the Object class contain?
+What are Generics in Java?
+What are interfaces in Java?
+What does extending a class do?
+What does implementing an interface do?
+What is the difference between runtime and compile time polymorphism?
+What is method overloading?
+What is method overriding?
+How might access modifiers help us achieve Encapsulation?
+How might interfaces help us achieve Abstraction?
+What does the Comparable interface do?
