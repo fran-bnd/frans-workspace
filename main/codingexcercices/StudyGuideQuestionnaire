@@ -1,33 +1,104 @@
-Week 1
+<< Week 1 >>
 
-What is compilation?
-What does it mean for Java to be strongly typed?
-What are primitive types?
-What are the 8 primitive types in Java?
-What is a method?
-What does ‘return’ do?
-What is a return type?
-What does the return type ‘void’ mean?
-What is a method parameter?
-What are the different boolean operators?
-What is a stack trace?
+- What is compilation? 
+Compilation means to transform a program written in a high-level programming language from source code into object code. 
+Java, being a platform-independent programming language, involves a two-step execution: 
+The first step is through an OS-independent compiler. 
+The second, in a virtual machine (JVM) which is custom-built for every operating system.
 
-Week 2
+- What does it mean for Java to be strongly typed? 
+Because it demands the declaration of every variable with a data type. Users cannot create a variable without the range of values it can hold. Once declared, the data type of the variable cannot be changed.
 
-What is OOP?
-What are Objects?
-What is the relationship between a Class and an Object in Java?
-What are constructors?
-What is an Array?
-What are the different flow control statements in Java?
-How is a for loop written in Java?
-What are break & continue statements?
-What is JUnit?
-What is a unit test?
-What are some of the annotations used in JUnit?
-What is TDD?
+- What are primitive types?
+Primitive types are the data types defined by the language itself.
 
-Week 3
+- What are the 8 primitive types in Java?
+boolean, byte
+char, short, long
+int, float, double
+
+- What is a method?
+A method is a block of code which only runs when it is called. You can pass data, known as parameters, into a method. 
+Methods are used to perform certain actions, and they are also known as functions.
+
+- What does ‘return’ do?
+The return keyword returns a value from a method. The method will return the value immediately when the keyword is encountered. 
+This means that the method will not execute any more statements beyond the return keyword, and any local variables created in the method will be discarded.
+
+- What is a return type?
+Every Method has a return type whether it is void, int, double, string or any other datatype. 
+The getReturnType() method of Method class returns a Class object that represent the return type, declared in method at time of creating the method.
+
+- What does the return type ‘void’ mean?
+The void keyword specifies that a method should not have a return value.
+
+- What is a method parameter?
+Parameters are variables defined in the method declaration after the method name, inside the parentheses. This includes primitive types such as int, float, boolean, etc, and non-primitive or object types.
+
+- What are the different boolean operators?
+The Boolean logical operators are : | , & , ^ , ! , || , && , == , != . Java supplies a primitive data type called Boolean, instances of which can take the value true or false only, and have the default value false.
+
+- What is a stack trace?
+A stack trace (also known as a stack backtrace) is a report of the active stack frames at a certain point in time during a thread's execution.
+
+
+<< Week 2 >>
+
+- What is OOP?
+Object-oriented programming is about creating objects that contain both data and methods.
+
+- What are Objects?
+Java object is a member or instance of a Java class. Each object has an identity, a behavior and a state. 
+The state of an object is stored in fields (variables), while methods (functions) display the object's behavior. Objects are created at runtime from templates, which are also known as classes.
+
+- What is the relationship between a Class and an Object in Java?
+A class is a template or "blue prints" for objects. A class defines object properties including a valid range of values, a default value, and also the object behavior.
+
+- What are constructors?
+A constructor in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created.
+Declared like a method, except its method signature does not contain a return type, and a constructor always has the same name as the class.
+"this" refers to the object which is being instantiated - it is used to initialize instance variables, or - to call other constructors (this is called constructor chaining)
+
+- What is an Array?
+An array is a contiguous block of memory storing a group of sequentially stored elements of the same type. 
+Arrays in Java are of a fixed size and cannot be resized after declaration.
+
+- What are the different flow control statements in Java?
+1. Decision-Making Statement: if, switch
+2. Loop Statements: for, while, do-while
+3. Jump Statements: break, continue
+
+- How is a for loop written in Java?
+for (int i=0; i < myData.length; i++) {
+  // typical for loop
+  System.out.println(myData[i]);
+ }
+
+- What are break & continue statements?
+Java’s break and continue statements belong to control statements and helps in alternating the flow of the program.
+These two keywords can be used in association with a label or without a label.
+
+- What is JUnit?
+JUnit is an open-source framework that is used for writing and executing unit tests in Java programming language. It is one of the best-known unit testing frameworks.
+Annotations are used to support, identify, and execute test method features.
+Assertions are used to check actual output versus expected output.
+
+- What is a unit test?
+Unit testing refers to the testing of individual components in the source code, such as classes and their provided methods. 
+The writing of tests reveals whether each class and method observes or deviates from the guideline of each method and class having a single, clear responsibility.
+
+- What are some of the annotations used in JUnit?
+@BeforeClass – Run once before any of the test methods in the class, public static void.
+@AfterClass – Run once after all the tests in the class have been run, public static void.
+@Before – Run before @Test, public void.
+@After – Run after @Test, public void.
+
+- What is TDD?
+Process called test-driven development, or TDD, is one way to ensure that most if not all of the code being written is tested to verify the functionality of the code.
+The TDD process consists of writing unit tests first, before the implemented application code has been written. Then, the implemented application code can be written to make the test pass and the process can be completed for each piece of functionality required.
+
+
+<< Week 3 >>
 
 What are exceptions in Java?
 How are errors different from exceptions?
