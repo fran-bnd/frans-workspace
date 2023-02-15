@@ -1,4 +1,4 @@
-<< Week 1 >>
+<< Unit 1 >>
 
 - What is compilation? 
 Compilation means to transform a program written in a high-level programming language from source code into object code. 
@@ -42,7 +42,7 @@ The Boolean logical operators are : | , & , ^ , ! , || , && , == , != . Java sup
 A stack trace (also known as a stack backtrace) is a report of the active stack frames at a certain point in time during a thread's execution.
 
 
-<< Week 2 >>
+<< Unit 2 >>
 
 - What is OOP?
 Object-oriented programming is about creating objects that contain both data and methods.
@@ -98,7 +98,7 @@ Process called test-driven development, or TDD, is one way to ensure that most i
 The TDD process consists of writing unit tests first, before the implemented application code has been written. Then, the implemented application code can be written to make the test pass and the process can be completed for each piece of functionality required.
 
 
-<< Week 3 >>
+<< Unit 3 >>
 
 - What are exceptions in Java?
 An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
@@ -181,7 +181,7 @@ Java has a feature called autoboxing which will automatically convert primitives
 Unboxing is the reverse - converting a wrapper class to its primitive.
 
 
-<< Week 4 >>
+<< Unit 4 >>
 
 - What do access modifiers do?
 Access modifiers are simply keywords in Java that provides accessibility of a class and its member. 
@@ -303,7 +303,7 @@ It allows to define the output of certain method calls. They typically record th
 This allows you to simplify the test setup.
 
 
-<< Week 5 >>
+<< Unit 5 >>
 
 - What is HTTP?
 HTTP stands for HyperText Transfer Protocol.
@@ -415,7 +415,7 @@ Controller (Javalin, handlers, status codes)
    → Database
 
 
-<< Week 6 >>
+<< Unit 6 >>
 
 - What are foreign keys in SQL?
 A FOREIGN KEY is a field (or collection of fields) in one table (child), that refers to the PRIMARY KEY in another table (parent).
@@ -486,7 +486,7 @@ RESTful APIs use HTTP verbs to perform some actions on objects and they adhere t
 A secure REST API should only provide HTTPS endpoints.
 
 
-<< Week 7 >>
+<< Unit 7 >>
 
 - What is the JDK?
 Java Development Kit (JDK) is used to create Java code. 
@@ -502,41 +502,165 @@ Since every machine can implement its own JREs and JVMs, Java source code does n
 This is known as Write Once, Run Anywhere (WORA).
 
 - What is contained in stack memory?
+Stack Memory in Java is used for static memory allocation and the execution of a thread. 
+It contains primitive values that are specific to a method and references to objects referred from the method that are in a heap.
+Access to this memory is in Last-In-First-Out (LIFO) order.
+It grows and shrinks as new methods are called and returned, respectively.
+Variables inside the stack exist only as long as the method that created them is running.
 
 - What is contained in heap memory?
-What is the String Pool & does it belong to stack or heap memory?
-What is garbage collection?
-What is UNIX?
-How do I change directories in UNIX?
-How do I view the contents of my directory in UNIX?
-What is Git?
-Why do we use Git?
-What is a commit?
-What is GitHub?
-What does pushing do?
-What does pulling do?
-What does clone do?
-What does branch do?
-What does checkout do?
-What does merge do?
+Heap space is used for the dynamic memory allocation of Java objects and JRE classes at runtime. New objects are always created in heap space, and the references to these objects are stored in stack memory.
+These objects have global access and we can access them from anywhere in the application.
+It's accessed via complex memory management techniques that include the Young Generation, Old or Tenured Generation, and Permanent Generation.
+If heap space is full, Java throws java.lang.OutOfMemoryError.
+Access to this memory is comparatively slower than stack memory
+
+- What is the String Pool & does it belong to stack or heap memory?
+String pool is a storage space in the Java heap memory where string literals are stored. 
+It is also known as String Constant Pool or String Intern Pool. It is privately maintained by the Java String class.
+
+- What is garbage collection?
+Garbage collection is the process of removing objects from the heap which have no references to them.
+Java abstracts the details away from the developer by allowing the JVM to handle memory management itself.
+Garbage collection is run in the background by the JVM.
+
+- What is UNIX?
+UNIX was developed as an open-source OS using C and Assembly languages.
+Unix is made up of 3 main parts: the kernel, the shell, and user commands and applications.
+
+- How do I change directories in UNIX?
+$ cd /var/log
+
+- How do I view the contents of my directory in UNIX?
+$ ls
+
+- What is Git?
+Version control systems (VCS) are software tools that help software teams manage changes to source code over time.
+The most popular VCS's is Git.
+
+- Why do we use Git?
+Version control software keeps track of every modification to the code in a special kind of database. 
+If a mistake is made, developers can turn back the clock and compare earlier versions of the code to help fix the mistake while minimizing disruption to all team members.
+
+Cycle: git init > git add > git commit > git push
+
+- What is a commit?
+Sends the latest changes of the source code to the repository, making these changes part of the head revision of the repository. 
+
+- What is GitHub?
+GitHub is the most popular code hosting platform for version control and collaboration. 
+It lets you and others work together on projects from anywhere. 
+
+- What does pushing do?
+git push command is used to upload local repository content to a remote repository. 
+Pushing is how you transfer commits from your local repository to a remote repo.
+git push <remote> <branch>
+
+- What does pulling do?
+git pull command is used to fetch and download content from a remote repository and immediately update the local repository to match that content.
+
+- What does clone do?
+Cloning a repository pulls down a full copy of all the repository data that GitHub.com has at that point in time, including all versions of every file and folder for the project. 
+
+- What does branch do?
+Starts an an independent line of development from the main branch.
+
+- What does checkout do?
+"To check out" means that you take any given commit from the repository and re-create the state of the associated file and directory tree in the working directory.
+
+- What does merge do?
+git merge will combine multiple sequences of commits into one unified history. 
+In the most frequent use cases, git merge is used to combine two branches.
 
 
-<< Week 8 >>
+<< Unit 8 >>
 
-What are the 4 pillars of OOP?
-Can you explain Inheritance?
-Can you explain Polymorphism?
-Can you explain Encapsulation?
-Can you explain Abstraction?
-What is the Object class in Java?
-What methods does the Object class contain?
-What are Generics in Java?
-What are interfaces in Java?
-What does extending a class do?
-What does implementing an interface do?
-What is the difference between runtime and compile time polymorphism?
-What is method overloading?
-What is method overriding?
-How might access modifiers help us achieve Encapsulation?
-How might interfaces help us achieve Abstraction?
-What does the Comparable interface do?
+- What are the 4 pillars of OOP?
+Inheritance, Polymorphism, Encapsulation, and Abstraction.
+
+- Can you explain Inheritance?
+Inheriting the common state and behavior of parent class (super class) by its derived class (sub class or child class).
+A sub class can inherit all non-private members from super class, by default.
+Single inheritance: 1 Parent class and 1 Child class. 
+Multi-level inheritance: +3 classes in such a way that a child class will act as parent class for another child class.
+Hierarchical inheritance: 1 super class and more than one sub classes extend the super class.
+Multiple inheritance: a class can inherit the behavior from more than one parent classes as well.
+
+- Can you explain Polymorphism?
+("taking on many forms") In programming, it describes how objects can behave differently in different contexts. 
+
+Method overloading is when there exist two or more methods in a class with the same method name, but different method signatures by changing the parameter list.
+compile-time - or static - polymorphism
+
+Method overriding is when a method in a child class has the same method signature as a method in the parent class, but with a different implementation. 
+runtime - or dynamic - polymorphism
+
+- Can you explain Encapsulation?
+Containing related state and behavior together inside a class, and also hiding and preventing change to an object's data members.
+Encapsulation is the mechanism that binds together code and the data it manipulates and keeps both safe from outside interference and misuse.
+Protective "wrapper" that prevents the code and data from being arbitrarily accessed by other code defined outside the wrapper.
+
+- Can you explain Abstraction?
+Abstraction centralizes common characteristics and generalize behavior into conceptual classes. 
+"Hide" underlying complexity through a simplified interface. 
+The Animal class contains characteristics and behaviors common to all animals.
+A car "abstracts" away the internal details of the engine, motor, driveshaft, and other parts.
+
+- What is the Object class in Java?
+Object is a special class in Java which is the root class from which all other classes inherit, either directly or indirectly.
+
+- What methods does the Object class contain?
+int hashCode() - Returns this object's hash code.
+String toString() - Returns a String representation of this object.
+boolean equals(Object o) - Indicates whether this object is equal to the o object.
+Object clone() - Returns a copy of this object.
+void finalize() - Called by the garbage collector when the object is destroyed.
+
+- What are Generics in Java?
+Generics are constructs introduced in Java 5 which enforce compile time safety by allowing you to use parameterized types. 
+Frequently and heavily used with collections. 
+Generics can be declared on a class (generic types), method parameters (generic methods), or return types.
+T => Generic data type
+E => Element
+K => Map Key
+V => Map Value
+N => Number
+
+- What is Equality?
+Shallow comparison: The default implementation of equals method is defined in Java.lang.Object class which simply checks if two Object references (say x and y) refer to the same Object. i.e. It checks if x == y. Since Object class has no data members that define its state, it is also known as shallow comparison.
+Deep Comparison: Suppose a class provides its own implementation of equals() method in order to compare the Objects of that class w.r.t state of the Objects. That means data members (i.e. fields) of Objects are to be compared with one another. Such Comparison based on data members is known as deep comparison.
+
+- What are interfaces in Java?
+Interface is similar to an abstract class, but there's a key difference: A class can only inherit one other class, but a class can implement as many interfaces as it needs.
+An interface can be defined as a container that stores the signatures of the methods to be implemented in the code segment.
+A class implements an interface using the *"implements"* keyword in the class definition and by providing implementations for any abstract methods defined by the interface.
+You define an interface by using the keyword *"interface"*.
+
+- What does extending a class do?
+The *"extends"* keyword extends a class indicating that a class is inherited from another class.
+A derived class has all of the public and protected properties of the class that it is derived from.
+
+- What does implementing an interface do?
+Implementing an interface allows a class to become more formal about the behavior it promises to provide.
+Interfaces form a contract between the class and the outside world, and this contract is enforced at build time by the compiler.
+
+- What is the difference between runtime and compile time polymorphism?
+Compile-time polymorphism, the compiler resolves the method call at compile-time (static binding). 
+Runtime polymorphism, it is resolved at runtime(dynamic binding) by the JVM.
+
+- How might access modifiers help us achieve Encapsulation?
+Access modifiers in Java allow us to set the scope or accessibility or visibility of a data member be it a field, constructor, class, or method.
+3P: Public, Protected, and Private
+
+- How might interfaces help us achieve Abstraction?
+Interface can be defined as a container that stores the signatures of the methods to be implemented in the code segment. 
+It improves the levels of Abstraction.
+
+- What does the Comparable interface do?
+Comparable is an interface which defines the natural ordering for a class. 
+A class must implement Comparable if it is to be sorted by the compareTo() method.
+The compareTo() method returns an int which is:
+ Zero, if the two objects are equal
+ Negative, if this object is smaller than that
+ Positive, if this object is greater than that
+
