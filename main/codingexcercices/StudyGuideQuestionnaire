@@ -100,104 +100,410 @@ The TDD process consists of writing unit tests first, before the implemented app
 
 << Week 3 >>
 
-What are exceptions in Java?
-How are errors different from exceptions?
-What is the difference between checked and unchecked exceptions?
-What might cause a NullPointerException?
-Is ArrayIndexOutOfBoundsException a runtime exception?
-Is FileNotFoundException a runtime exception?
-How do I find where an exception was thrown within the program?
-What does ‘throws’ do?
-What does try/catch do?
-Can I have multiple catch blocks? Multiple try blocks?
-What are collections in Java?
-What is the difference between a List and a Set?
-What is the difference between a Set and a Map?
-What is the difference between a Stack and a Queue?
-What is the difference between an ArrayList and LinkedList?
-Are maps part of the collection interface?
-What is a wrapper class?
+- What are exceptions in Java?
+An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
+Exceptions are never thrown during the compilation process - they can only be thrown when the code is executing (running).
 
-Week 4
+- How are errors different from exceptions?
+Both exceptions and errors are the subclasses of a throwable class. 
+The error implies a problem that mostly arises due to the shortage of system resources. An Error represents something that went so horribly wrong with your application that you should not attempt to recover from.
+Exceptions are never thrown during the compilation process - they can only be thrown when the code is executing (running).
 
-What do access modifiers do?
-What are the 4 access modifiers?
-What are the non-access modifiers in Java?
-What does Static do?
-What does final do?
-What is Scope in programming languages?
-What are the different scopes in Java?
-What is SQL & why is it used?
-What are the sublanguages of SQL?
-What is a table in SQL?
-What are primary keys for?
-How do I query everything from a table?
-How do I query only the rows that meet some criteria in a table?
-How do I insert into a table?
-How do I update values in a table?
-How do I sort the results of a query in SQL?
-What do aggregate functions do in SQL?
-What are some of the aggregate functions?
-What is JDBC?
-What are the different classes/interfaces used in JDBC?
-What needs to be done to query from the database using JDBC?
-What is a DAO for?
-What is Mockito for?
-How are Mock objects in Mockito created?
+- What is the difference between checked and unchecked exceptions?
+Exceptions that require mandatory handling are called checked exceptions. The compiler will check that such exceptions are handled by the program.
+Checked Exceptions should be used for predictable, but unpreventable errors that are reasonable to recover from.
+Unchecked Exceptions should be used for everything else. Is something that has gone wrong with the program and is unrecoverable. Also known as an runtime exception.
+A checked exception must be handled either by re-throwing or with a try catch block, whereas an unchecked isn't required to be handled.
 
-Week 5
+- What might cause a NullPointerException?
+The NullPointerException occurs due to a situation in application code where an uninitialized object is attempted to be accessed or modified. 
+Essentially, this means the object reference does not point anywhere and has a null value.
 
-What is HTTP?
-What is GET usually used for?
-What is POST usually used for?
-What is PUT usually used for?
-What is PATCH usually used for?
-What is DELETE usually used for?
-What are 100-level status codes for?
-What are 200-level status codes for?
-What are 300-level status codes for?
-What are 400-level status codes for?
-What are 500-level status codes for?
-What is a path parameter?
-What is a request body?
-What is a response body?
-What are headers?
-What is JSON?
-What is Javalin?
-How can I build a server using Javalin?
-How can I design an endpoint in Javalin?
-What is the Context object for in Javalin?
-What is Maven?
-What is the Maven lifecycle?
-How do I find & add a new dependency to Maven?
-Can you explain the 3-layer controller-service-DAO architecture?
+- Is ArrayIndexOutOfBoundsException a runtime exception?
+The ArrayIndexOutOfBoundsException is a runtime exception in Java that occurs when an array is accessed with an illegal index. 
+The index is either negative or greater than or equal to the size of the array.
 
-Week 6
+- Is FileNotFoundException a runtime exception?
+FileNotFoundException is a checked exception is used that occurs when a file path specified for accessing does not exist or is inaccessible. 
+With the checked exception, it means that the java compiler checks at compile time if this exception has been handled or not; otherwise, a compile-time error occurs.
 
-What are foreign keys in SQL?
-What is referential integrity in SQL?
-What is an alias in SQL?
-What is multiplicity in SQL?
-What is normalization & why do we use it?
-What characterizes 1st normal form (1nf)?
-What characterizes 2nd normal form (2nf)?
-What characterizes 3rd normal form (3nf)?
-What is join in SQL?
-What is an inner join?
-What are left/right joins?
-What is a view in SQL?
-What is REST?
-What is a resource in REST?
-Why do we use REST?
-What do we need to do to make an endpoint RESTful?
+- How do I find where an exception was thrown within the program?
+A Java stack trace is displayed when an error or exception occurs. The stack trace, also called a backtrace, consists of a collection of stack records, which store an application's movement during its execution.
 
-Week 7
+- What does ‘throws’ do?
+The throws keyword in Java is used to declare exceptions that can occur during the execution of a program. 
+For any method that can throw exceptions, it is mandatory to use the throws keyword to list the exceptions that can be thrown.
 
-What is the JDK?
-What is the JRE?
-What is the JVM? 
-What is contained in stack memory?
-What is contained in heap memory?
+- What does try/catch do?
+The try-catch is the simplest method of handling exceptions. Put the code you want to run in the try block, and any Java exceptions that the code throws are caught by one or more catch blocks. 
+This method will catch any type of Java exceptions that get thrown.
+
+- Can I have multiple catch blocks? Multiple try blocks?
+Yes you can have multiple catch blocks with try statement. You start with catching specific exceptions and then in the last block you may catch base Exception . Only one of the catch block will handle your exception.
+You cannot have multiple try blocks with a single catch block. Each try block must be followed by catch or finally. 
+Still if you try to have single catch block for multiple try blocks a compile time error is generated.
+finally {
+			System.out.println("The finally block will always run! (unless System.exit(0) is called or power is lost)");
+		}
+    
+- What are collections in Java?
+The Collections framework in Java is a set of classes and interfaces that implement commonly used data structures. 
+A collection is a single object which acts as a container for other objects.
+The Collection interface extends the Iterable interface. The iterable interface has only one method called iterator().
+
+- What is the difference between a List and a Set?
+The main difference between List and Set is that Set is unordered and contains all unique elements, 
+whereas the list is sequentially ordered and can have repeted elements in it.
+
+- What is the difference between a Set and a Map?
+Both interfaces are used to store the collection of objects as a single unit. 
+The main difference between Set and Map is that Set contains only data elements, 
+and the Map contains the data in the key-value pair, so Map contains key and its value.
+
+
+- What is the difference between a Stack and a Queue?
+The primary difference between Stack and Queue structures is that Stack follows LIFO while Queue follows FIFO data structure type. LIFO refers to Last In First Out. 
+It means that when we put data in a Stack, it processes the last entry first.
+
+- What is the difference between an ArrayList and LinkedList?
+ArrayList internally uses a dynamic array to store its elements. LinkedList uses Doubly Linked List to store its elements. 
+ArrayList is slow as array manipulation is slower. LinkedList is faster being node based as not much bit shifting required.
+
+- Are maps part of the collection interface?
+Map interface is a part of Java Collection Framework, but it doesn't inherit Collection Interface.
+Does not extend Iterable.
+
+- What is a wrapper class?
+Wrapper classes are classes that let you treat primitives as Objects. 
+This is necessary for certain methods which only accept objects and not primitives. 
+Boxing is the process of converting a primitive to its wrapper class. 
+Java has a feature called autoboxing which will automatically convert primitives to wrapper classes implicitly. 
+Unboxing is the reverse - converting a wrapper class to its primitive.
+
+
+<< Week 4 >>
+
+- What do access modifiers do?
+Access modifiers are simply keywords in Java that provides accessibility of a class and its member. 
+They set the access level to methods, variable, classes and constructors.
+
+- What are the 4 access modifiers?
+public: The member with public modifiers can be accessed by any classes. The public methods, variables or class have the widest scope.
+default: When we do not mention any access modifier, it is treated as default. It is accessible only within same package.
+protected: The protected modifier is used within same package. It lies between public and default access modifier. It can be accessed outside the package but through inheritance only.
+private: The private methods, variables and constructor are not accessible to any other class. It is the most restrictive access modifier. A class except a nested class cannot be private.
+
+- What are the non-access modifiers in Java?
+Non-access modifiers are to achieve many other functionalities from the 4 access modifiers.
+static. final. abstract. synchronized...
+
+- What does Static do?
+The static keyword is used to create variables that will exist independently of any instances created for the class. 
+Only one copy of the static variable exists regardless of the number of instances of the class.
+Static variables are also known as class variables. Local variables cannot be declared static.
+
+- What does final do?
+The final modifier for finalizing the implementations of classes, methods, and variables.
+The main intention of making a method final would be that the content of the method should not be changed by any outsider.
+If a class is marked as final then no class can inherit any feature from the final class.
+A reference variable declared final can never be reassigned to refer to an different object.
+
+- What is Scope in programming languages?
+When a variable is declared in a Java program, it is attached to a specific scope within the program, which determines where the variable resides. 
+
+- What are the different scopes in Java?
+Instance, or object, scope: the variable is attached to individual objects created from the class.
+Class, or static, scope: reside on the class definition itself. Change is reflected across all instances of the class ("static" keyword).
+Method scope: variables are only available within the method they are declared; they do not exist after the method finishes execution.
+Block scope: variables only exist in for, while, and do-while loops, if/else-if/else blocks, switch cases, or even just regular blocks of code declared via curly braces ({}).
+
+- What is SQL & why is it used?
+SQL databases are a type of RDBMS which use the standard Structured Query Language to administer the data. 
+Data in a SQL database are started in objects called tables. Tables provide the relational information for the data stored in the database.
+SQL is a scripting language that is interpreted by the database server.
+
+- What are the sublanguages of SQL?
+DDL	Data Definition Language. Defines data structure
+DML	Data Manipulation Language. Insert, Update, Delete record
+DCL	Data Control Language. Grant or revoke access permissons to database object
+TCL	Transaction Control Language. Defines concurrent operation boundaries
+DQL	Data Query Language. Search, filter, group, aggregate stored data
+
+- What is a table in SQL?
+Each table is defined with a set of columns and values. Each column must have a data type which restricts the type of data that can be assigned to it. 
+
+- What are primary keys for?
+Constraint that is used to uniquely identify each record in a table.
+Primary keys must contain values that are UNIQUE and NOT NULL.
+A table can have only a single primary key.
+
+- How do I query everything from a table?
+SELECT * FROM Table1;
+SELECT <projection> FROM <table_name> [WHERE where_condition [GROUP BY {col_name | expr | position}] [HAVING having_condition] [ORDER BY {col_name | expr | position}] [ASC | DESC] [LIMIT {[offset,] row_count | row_count OFFSET offset}];
+
+- How do I query only the rows that meet some criteria in a table?
+SELECT * FROM Table1 WHERE 
+
+- How do I insert into a table?
+INSERT INTO roles (id, name) values (1, 'ADMIN'), (2, 'OWNER'), (3, 'EDITOR'), (4, 'VIEWER');
+
+- How do I update values in a table?
+UPDATE my_table SET my_value='where val' WHERE id=1;
+
+DELETE FROM my_table WHERE id=3;
+
+- How do I sort the results of a query in SQL?
+SELECT name, price, type FROM produce ORDER BY name ASC;
+
+- What do aggregate functions do in SQL?
+Aggregate functions in MySQL provides the output as a single value after performing different operations on a set of values like 
+the sum of all values, the average of all values, maximum and minimum value among certain group of values.
+
+- What are some of the aggregate functions?
+count()	Returns the number of rows, including rows with NULL values in a group.
+sum()	Returns the total summed values in a set.
+average()	Returns the average value of an expression.
+min()	Returns the minimum (lowest) value in a set.
+max()	Returns the maximum (highest) value in a set.
+
+- What is JDBC?
+JDBC stands for Java Database Connectivity. 
+It is a relatively low-level API used to write Java code that interacts with relational databases via SQL.
+
+- What are the different classes/interfaces used in JDBC?
+DriverManager class - to make a connection with a database driver
+DataSource interface - for retrieving connections, an alternative to DriverManager
+Connection interface - represents a physical connection with a database
+SQLException class - a general exception thrown when something goes wrong when accessing the database
+Statement interface - used for executing static SQL statements
+PreparedStatement interface - represents pre-compiled SQL statements
+CallableStatement interface - used to execute stored procedures
+ResultSet interface - represents data returned from the database
+
+- What needs to be done to query from the database using JDBC?
+Establishing a connection.
+Create a statement.
+Execute the query.
+Process the ResultSet object.
+Close the connection.
+
+- What is a DAO for?
+Logically separate the code that accesses the database into Data Access Objects - this is referred to as the DAO design pattern.
+Define an interface which declares methods through which the database will be queried. 
+Then, concrete implementation classes can implement the interface and contain the data access logic to return the required data.
+
+- What is Mockito for?
+Mockito is a popular open source framework for mocking objects in software test. 
+Using Mockito greatly simplifies the development of tests for classes with external dependencies.
+It is a Java-based library used to create simple and basic test APIs for performing unit testing of Java applications.
+
+- How are Mock objects in Mockito created?
+A mock object is a dummy implementation for an interface or a class. 
+It allows to define the output of certain method calls. They typically record the interaction with the system and tests can validate that.
+This allows you to simplify the test setup.
+
+
+<< Week 5 >>
+
+- What is HTTP?
+HTTP stands for HyperText Transfer Protocol.
+A technique of transmitting data in a particular format, primarily between a server and a browser. 
+It uses an architecture in which a client makes a connection to a server, makes a request, and waits for the response.
+
+- What is GET usually used for?
+GET method is used to retrieve data from a server at the specified resource. 
+Since a GET request is only requesting data and not modifying any resources, it's considered a safe and idempotent method.
+
+- What is POST usually used for?
+POST requests are used to send data to the API server to create or update a resource. 
+The data sent to the server is stored in the request body of the HTTP request.
+POST request is non-idempotent.
+
+- What is PUT usually used for?
+PUT update or create a resource. The difference is that PUT requests are idempotent. That is, calling the same PUT request multiple times will always produce the same result.
+PUT request creates a resource the server will respond with a 201 (Created), and if the request modifies existing resource the server will return a 200 (OK) or 204 (No Content).
+
+- What is PATCH usually used for?
+The difference with PATCH is that you only apply partial modifications to the resource.
+The difference between PATCH and PUT, is that a PATCH request is non-idempotent (like a POST request).
+With a PATCH request, you may only need to send the updated username in the request body - as opposed to POST and PUT which require the full user entity.
+
+- What is DELETE usually used for?
+Delete the resource at the specified URL. This method is one of the more common in RESTful.
+
+- What are X00-level status codes for?
+Informational responses (100–199)
+Successful responses (200–299)
+Redirection messages (300–399)
+Client error responses (400–499)
+Server error responses (500–599)
+
+- What is a path parameter?
+Path parameters are variable parts of a URL path. 
+They are typically used to point to a specific resource within a collection, such as a user identified by ID.
+A URL can have several path parameters, each denoted with curly braces { } . GET /users/{id}
+
+- What is a request body?
+Request Body is the part of the HTTP Request where additional content can be sent to the server. For example, a file type of JSON or XML. 
+Request body tries to send additional information required by the server to process current request properly.
+
+- What is a response body?
+The response body contains the requested information in the format specified by the Accept field in the request header. 
+For JSON, the body is typically an object or an array of objects.
+
+- What are headers?
+An HTTP header is a field of an HTTP request or response that passes additional context and metadata about the request or response. 
+A request message can use headers to indicate it's preferred media formats, while a response can use header to indicate the media format of the returned body.
+
+- What is JSON?
+JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate.
+JSON Object is a set of key and value pair enclosed within curly braces. A key is a string enclosed in quotation marks. A value can be a string, number, boolean expression, array, or object. A key value pair follows a specific syntax, with the key followed by a colon followed by the value. 
+Key/value pairs are separated by comma. { "id":"01", "name": "Tom", "lastname": "Price" }
+
+- What is Javalin?
+Javalin is lightweight Java and Kotlin web framework. Create REST APIs in Java or Kotlin easily.
+
+- How can I build a server using Javalin?
+import io.javalin.Javalin;
+public static void main(String[] args) {
+    Javalin app = Javalin.create().start(7000);
+    app.get("/", ctx -> ctx.result("Hello World"));
+}
+
+- How can I design an endpoint in Javalin?
+Endpoint handlers are the main handler type, and defines your API. You can add a GET handler to server data to a client, or a POST handler to receive some data. 
+Common methods are supported directly on the Javalin class (GET, POST, PUT, PATCH, DELETE)
+app.get("/output", ctx -> {
+    // some code
+    ctx.json(object);
+});
+
+- What is the Context object for in Javalin?
+The Context object provides you with everything you need to handle a http-request. 
+It contains the underlying servlet-request and servlet-response, and a bunch of getters and setters.
+
+- What is Maven?
+Maven is a tool that can be used for building and managing any Java-based project.
+Simplifies the build process. 
+Adding jars and dependencies. 
+Documenting project information with change logs and reports
+Integration with source control systems (Git)
+
+Project Object Model (POM) pom.xml file
+
+- What is the Maven lifecycle?
+Validate => project is correct and all necessary information is available
+Compile => compiles project source code
+Test => tests all compiled code
+Package => packages all compiled code to WAR/JAR file
+Integration => performs all integration tests on WAR/JAR
+Verify => runs checks on the results of integration tests
+Install => installs WAR/JAR to local repository
+Deploy => copies final WAR/JAR to the remote repository
+mvn --version
+
+- How do I find & add a new dependency to Maven?
+pom.xml file <dependencies>
+Right-click the utility project, and select Maven>Add Dependency. 
+Type a dependency name in the Enter groupID… field (e.g., commons-logging) to search for a dependency. 
+Select the dependency, and click OK.
+
+- Can you explain the 3-layer controller-service-DAO architecture?
+Controller (Javalin, handlers, status codes) 
+ → Service Layer (business logic, security checks)
+  → DAO Layer (sql, preparedStatement, ResultSet, SQLEXception)
+   → Database
+
+
+<< Week 6 >>
+
+- What are foreign keys in SQL?
+A FOREIGN KEY is a field (or collection of fields) in one table (child), that refers to the PRIMARY KEY in another table (parent).
+
+- What is referential integrity in SQL?
+Referential integrity is the relationship between tables. 
+Each table in a database has a primary key, this primary key can appear in other tables because of its relationship to data within other tables. 
+Referential integrity does not allow the addition of any record in a table that contains the foreign key unless the reference table contains a corresponding primary key.
+
+- What is an alias in SQL?
+Aliases is used to give a temporary name to a table or a column in a table for the intention to support a specific query.
+SELECT column_name AS alias_name FROM table_name
+
+- What is multiplicity in SQL?
+The Multiplicity of a relationship specifies the cardinality or number of instances of an EntityType that can be associated with the instances of another EntityType.
+1to1, 1toMany, Manyto1, ManytoMany.
+
+- What is normalization & why do we use it?
+Normalization is the process of efficiently organising data in a database. 
+Objectives of normalization are, eliminate redundant data ie to make sure that the same data is not stored twice and 
+to ensure data dependencies make sense, ie to store only relational data in the table.
+
+- What characterizes 1st normal form (1nf)?
+1NF, all the fields in the tables are atomic.
+The elimination of recurring groups of relations.
+
+- What characterizes 2nd normal form (2nf)?
+2NF if it is in 1NF and if every non-key attribute is completely dependent only on the Primary Key.
+
+- What characterizes 3rd normal form (3nf)?
+3NF, the relationship between any two non key attributes, or groups of non-key attributes, must not be in a one to one relation.
+Boyce-Codd Normal Form: Boyce-Codd Normal Form or BCNF is an extension to the third normal form, and is also known as 3.5 Normal Form.
+
+- What is join in SQL?
+A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+
+- What is an inner join?
+An INNER JOIN selects all rows from both tables as long as there is a match between the columns. If there are data in the "EMP1" table that do not have matches in "EMP2", these orders will not be shown.
+SELECT ID, Name, Salary FROM EMP1 INNER JOIN EMP2 on EMP1.Salary = EMP2.Salary;
+
+- What are left/right joins?
+LEFT JOIN returns all records from the left table, and the records that match the condition from the right table.
+RIGHT JOIN returns all records from the right table, and the records that match the condition from the left table.
+SELECT ID, Name, Salary FROM EMP1 LEFT JOIN EMP2 ON EMP1.Name = EMP2.Name
+
+- What is a view in SQL?
+View is a virtual table based on the result-set of an SQL statement. 
+A view consists of rows and columns, just like a common table. The view fields are fields from one or more real tables in the database.
+
+- What is REST?
+Representational State Transfer (REST) is an architectural style that defines a set of constraints to be used for creating web services. 
+REST API is a way of accessing web services in a simple and flexible way without having any processing.
+REST technology is generally preferred to the more robust Simple Object Access Protocol (SOAP) technology because REST uses less bandwidth, and is simple and flexible making it more suitable for internet usage. 
+It’s used to fetch or give some information from a web service. All communication done via REST API uses only HTTP requests.
+
+- What is a resource in REST?
+The key abstraction of information in REST is a resource.
+Any concept that might be the target of an author’s hypertext reference must fit within the definition of a resource.
+Under REST principles, a URL identifies a resource. (URLs should include nouns, not verbs.)
+
+- Why do we use REST? 
+API stands for Application Programming Interface. It is a medium that allows different applications to communicate programmatically with one another and return a response in real time.
+REST APIs is that they provide a great deal of flexibility. 
+Data is not tied to resources or methods, so REST can handle multiple types of calls, return different data formats and even change structurally with the correct implementation of hypermedia.
+
+- What do we need to do to make an endpoint RESTful?
+RESTful APIs use HTTP verbs to perform some actions on objects and they adhere to some principles that say how resources should be identified/represented and how they should be manipulated through those representations.
+A secure REST API should only provide HTTPS endpoints.
+
+
+<< Week 7 >>
+
+- What is the JDK?
+Java Development Kit (JDK) is used to create Java code. 
+Includes Developement Tools, and the JRE.
+
+- What is the JRE?
+Java code is then compiled into bytecode for a particular Java Runtime Environment (JRE).
+Includes JVM and libraries.
+
+- What is the JVM? 
+JRE runs the bytecode in a Java Virtual Machine (JVM) which is specific to the machine and operating system.
+Since every machine can implement its own JREs and JVMs, Java source code does not have to be rewritten to be machine-specific. 
+This is known as Write Once, Run Anywhere (WORA).
+
+- What is contained in stack memory?
+
+- What is contained in heap memory?
 What is the String Pool & does it belong to stack or heap memory?
 What is garbage collection?
 What is UNIX?
@@ -214,7 +520,8 @@ What does branch do?
 What does checkout do?
 What does merge do?
 
-Week 8
+
+<< Week 8 >>
 
 What are the 4 pillars of OOP?
 Can you explain Inheritance?
