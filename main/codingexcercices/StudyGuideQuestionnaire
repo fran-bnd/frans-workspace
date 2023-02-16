@@ -160,7 +160,6 @@ Both interfaces are used to store the collection of objects as a single unit.
 The main difference between Set and Map is that Set contains only data elements, 
 and the Map contains the data in the key-value pair, so Map contains key and its value.
 
-
 - What is the difference between a Stack and a Queue?
 The primary difference between Stack and Queue structures is that Stack follows LIFO while Queue follows FIFO data structure type. LIFO refers to Last In First Out. 
 It means that when we put data in a Stack, it processes the last entry first.
