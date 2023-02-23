@@ -230,6 +230,7 @@ DQL	Data Query Language. Search, filter, group, aggregate stored data
 
 - What is a table in SQL?
 Each table is defined with a set of columns and values. Each column must have a data type which restricts the type of data that can be assigned to it. 
+A table consists of records (rows) and fields (columns).
 
 - What are primary keys for?
 Constraint that is used to uniquely identify each record in a table.
@@ -241,10 +242,11 @@ SELECT * FROM Table1;
 SELECT <projection> FROM <table_name> [WHERE where_condition [GROUP BY {col_name | expr | position}] [HAVING having_condition] [ORDER BY {col_name | expr | position}] [ASC | DESC] [LIMIT {[offset,] row_count | row_count OFFSET offset}];
 
 - How do I query only the rows that meet some criteria in a table?
-SELECT * FROM Table1 WHERE 
+SELECT * FROM Table1 WHERE value > 100;
+SELECT DISTINCT name FROM volunteers WHERE max_bags = 4;
 
 - How do I insert into a table?
-INSERT INTO roles (id, name) values (1, 'ADMIN'), (2, 'OWNER'), (3, 'EDITOR'), (4, 'VIEWER');
+INSERT INTO roles (id, name) VALUES (1, 'Admin'), (2, 'Owner'), (3, 'Editor'), (4, 'Viewer');
 
 - How do I update values in a table?
 UPDATE my_table SET my_value='where val' WHERE id=1;
@@ -312,6 +314,7 @@ It uses an architecture in which a client makes a connection to a server, makes 
 - What is GET usually used for?
 GET method is used to retrieve data from a server at the specified resource. 
 Since a GET request is only requesting data and not modifying any resources, it's considered a safe and idempotent method.
+app.get("/messages/{message_id}", this::getMessageByIdHandler);
 
 - What is POST usually used for?
 POST requests are used to send data to the API server to create or update a resource. 
@@ -426,7 +429,7 @@ Referential integrity does not allow the addition of any record in a table that 
 
 - What is an alias in SQL?
 Aliases is used to give a temporary name to a table or a column in a table for the intention to support a specific query.
-SELECT column_name AS alias_name FROM table_name
+SELECT column_name AS alias_name FROM table_name;
 
 - What is multiplicity in SQL?
 The Multiplicity of a relationship specifies the cardinality or number of instances of an EntityType that can be associated with the instances of another EntityType.
@@ -452,13 +455,13 @@ Boyce-Codd Normal Form: Boyce-Codd Normal Form or BCNF is an extension to the th
 A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
 
 - What is an inner join?
-An INNER JOIN selects all rows from both tables as long as there is a match between the columns. If there are data in the "EMP1" table that do not have matches in "EMP2", these orders will not be shown.
-SELECT ID, Name, Salary FROM EMP1 INNER JOIN EMP2 on EMP1.Salary = EMP2.Salary;
+An INNER JOIN selects all rows from both tables as long as there is a match between the columns. If there are data in the "Emp1" table that do not have matches in "Emp2", these orders will not be shown.
+SELECT ID, Name, Salary FROM Emp1 INNER JOIN Emp2 ON Emp1.Salary = Emp2.Salary;
 
 - What are left/right joins?
 LEFT JOIN returns all records from the left table, and the records that match the condition from the right table.
 RIGHT JOIN returns all records from the right table, and the records that match the condition from the left table.
-SELECT ID, Name, Salary FROM EMP1 LEFT JOIN EMP2 ON EMP1.Name = EMP2.Name
+SELECT ID, Name, Salary FROM Emp1 LEFT JOIN Emp2 ON Emp1.Name = Emp2.Name;
 
 - What is a view in SQL?
 View is a virtual table based on the result-set of an SQL statement. 
@@ -475,10 +478,27 @@ The key abstraction of information in REST is a resource.
 Any concept that might be the target of an author’s hypertext reference must fit within the definition of a resource.
 Under REST principles, a URL identifies a resource. (URLs should include nouns, not verbs.)
 
+- Principles of the REST architectural style.
+>Uniform interface: 
+It indicates that the server transfers information in a standard format. The formatted resource is called a representation in REST. 
+This format can be different from the internal representation of the resource on the server application. For example, the server can store data as text but send it in an HTML representation format.
+Uniform interface imposes four architectural constraints:
+1. Requests should identify resources. They do so by using a uniform resource identifier.
+2. Clients have enough information in the resource representation to modify or delete the resource if they want to. The server meets this condition by sending metadata that describes the resource further.
+3. Clients receive information about how to process the representation further. The server achieves this by sending self-descriptive messages that contain metadata about how the client can best use them.
+4. Clients receive information about all other related resources they need to complete a task. The server achieves this by sending hyperlinks in the representation so that clients can dynamically discover more resources.
+>Statelessness:
+In REST architecture, statelessness refers to a communication method in which the server completes every client request independently of all previous requests. 
+Clients can request resources in any order, and every request is stateless or isolated from other requests. 
+This REST API design constraint implies that the server can completely understand and fulfill the request every time. 
+
 - Why do we use REST? 
 API stands for Application Programming Interface. It is a medium that allows different applications to communicate programmatically with one another and return a response in real time.
 REST APIs is that they provide a great deal of flexibility. 
 Data is not tied to resources or methods, so REST can handle multiple types of calls, return different data formats and even change structurally with the correct implementation of hypermedia.
+Scalability: Systems that implement REST APIs can scale efficiently because REST optimizes client-server interactions. Statelessness removes server load because the server does not have to retain past client request information. 
+Flexibility: RESTful web services support total client-server separation. They simplify and decouple various server components so that each part can evolve independently. Platform or technology changes at the server application do not affect the client application. The ability to layer application functions increases flexibility even further. For example, developers can make changes to the database layer without rewriting the application logic.
+Independence: REST APIs are independent of the technology used. You can write both client and server applications in various programming languages without affecting the API design. You can also change the underlying technology on either side without affecting the communication.
 
 - What do we need to do to make an endpoint RESTful?
 RESTful APIs use HTTP verbs to perform some actions on objects and they adhere to some principles that say how resources should be identified/represented and how they should be manipulated through those representations.
@@ -545,6 +565,8 @@ Cycle: git init > git add > git commit > git push
 
 - What is a commit?
 Sends the latest changes of the source code to the repository, making these changes part of the head revision of the repository. 
+git commit saves repository changes on local but not remote repository. 
+Contrarily, git push then updates your git commit changes and sends it to remote repository. 
 
 - What is GitHub?
 GitHub is the most popular code hosting platform for version control and collaboration. 
