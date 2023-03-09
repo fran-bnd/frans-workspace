@@ -1,4 +1,4 @@
-<< Unit 1 >>
+## Unit 1
 
 - What is compilation? 
 Compilation means to transform a program written in a high-level programming language from source code into object code. 
@@ -42,7 +42,7 @@ The Boolean logical operators are : | , & , ^ , ! , || , && , == , != . Java sup
 A stack trace (also known as a stack backtrace) is a report of the active stack frames at a certain point in time during a thread's execution.
 
 
-<< Unit 2 >>
+## Unit 2
 
 - What is OOP?
 Object-oriented programming is about creating objects that contain both data and methods.
@@ -98,7 +98,7 @@ Process called test-driven development, or TDD, is one way to ensure that most i
 The TDD process consists of writing unit tests first, before the implemented application code has been written. Then, the implemented application code can be written to make the test pass and the process can be completed for each piece of functionality required.
 
 
-<< Unit 3 >>
+## Unit 3
 
 - What are exceptions in Java?
 An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
@@ -180,7 +180,7 @@ Java has a feature called autoboxing which will automatically convert primitives
 Unboxing is the reverse - converting a wrapper class to its primitive.
 
 
-<< Unit 4 >>
+## Unit 4
 
 - What do access modifiers do?
 Access modifiers are simply keywords in Java that provides accessibility of a class and its member. 
@@ -304,7 +304,7 @@ It allows to define the output of certain method calls. They typically record th
 This allows you to simplify the test setup.
 
 
-<< Unit 5 >>
+## Unit 5
 
 - What is HTTP?
 HTTP stands for HyperText Transfer Protocol.
@@ -417,7 +417,7 @@ Controller (Javalin, handlers, status codes)
    → Database
 
 
-<< Unit 6 >>
+## Unit 6
 
 - What are foreign keys in SQL?
 A FOREIGN KEY is a field (or collection of fields) in one table (child), that refers to the PRIMARY KEY in another table (parent).
@@ -505,7 +505,7 @@ RESTful APIs use HTTP verbs to perform some actions on objects and they adhere t
 A secure REST API should only provide HTTPS endpoints.
 
 
-<< Unit 7 >>
+## Unit 7
 
 - What is the JDK?
 Java Development Kit (JDK) is used to create Java code. 
@@ -594,7 +594,7 @@ git merge will combine multiple sequences of commits into one unified history.
 In the most frequent use cases, git merge is used to combine two branches.
 
 
-<< Unit 8 >>
+## Unit 8
 
 - What are the 4 pillars of OOP?
 Inheritance, Polymorphism, Encapsulation, and Abstraction.
